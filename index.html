@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free student tools including percentage, age and EMI calculators.">
+  <title>Student Tools India - Free Online Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="logo" href="#home">Student Tools India</a>
+    <div class="links">
+      <a href="#tools">Tools</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="tag">100% Free • Mobile Friendly</p>
+    <h1>Useful tools for students and job seekers</h1>
+    <p>Calculate percentages, age and EMI quickly from your phone.</p>
+    <a class="btn" href="#tools">Explore Tools</a>
+  </div>
+</section>
+
+<section id="tools" class="section">
+  <h2>Free Tools</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>Percentage Calculator</h3>
+      <label>Marks obtained</label>
+      <input id="obtained" type="number" placeholder="e.g. 450">
+      <label>Total marks</label>
+      <input id="total" type="number" placeholder="e.g. 500">
+      <button onclick="percentage()">Calculate</button>
+      <p id="percentageResult" class="result"></p>
+    </article>
+
+    <article class="card">
+      <h3>Age Calculator</h3>
+      <label>Date of birth</label>
+      <input id="dob" type="date">
+      <button onclick="age()">Calculate</button>
+      <p id="ageResult" class="result"></p>
+    </article>
+
+    <article class="card">
+      <h3>EMI Calculator</h3>
+      <label>Loan amount (₹)</label>
+      <input id="loan" type="number" placeholder="e.g. 100000">
+      <label>Annual interest (%)</label>
+      <input id="rate" type="number" step="0.01" placeholder="e.g. 10">
+      <label>Tenure (months)</label>
+      <input id="months" type="number" placeholder="e.g. 24">
+      <button onclick="emi()">Calculate</button>
+      <p id="emiResult" class="result"></p>
+    </article>
+  </div>
+</section>
+
+<section id="jobs" class="section alt">
+  <h2>Job Resources</h2>
+  <p>Use this section later for verified job listings, trainee opportunities and career guides.</p>
+  <div class="notice">Tip: Always verify a company and never pay a recruiter for a job offer.</div>
+</section>
+
+<section id="resume" class="section">
+  <h2>Free Resume Help</h2>
+  <p>Coming soon: a simple resume builder that lets students create a professional CV from their phone.</p>
+</section>
+
+<section id="contact" class="section alt">
+  <h2>Contact</h2>
+  <p>Replace this text with your email or social links when you publish the site.</p>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Student Tools India. Built with free web technology.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
