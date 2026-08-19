@@ -6,707 +6,782 @@
 
 <title>Student Tools India | Free Student Tools & Calculators</title>
 
-<meta name="description" content="Free student tools for India including percentage, CGPA, marks, EMI, GST, BMI, interest calculators, Pomodoro timer and resume builder.">
-<meta name="keywords" content="student tools India, percentage calculator, CGPA calculator, marks calculator, resume builder, EMI calculator, study timer">
+<meta name="description" content="Student Tools India provides free calculators, CGPA, marks, EMI, GST, BMI, study timer, resume builder, internships, jobs and learning resources for Indian students.">
+
+<meta name="keywords" content="student tools India, CGPA calculator, percentage calculator, marks calculator, resume builder, student jobs, internships, NPTEL, AICTE internship">
 
 <style>
+
 :root{
-  --primary:#4f46e5;
-  --primary2:#7c3aed;
-  --accent:#facc15;
-  --bg:#f5f7fb;
-  --card:#ffffff;
-  --text:#172033;
-  --muted:#64748b;
-  --border:#e2e8f0;
-  --success:#16a34a;
-  --danger:#dc2626;
-  --shadow:0 8px 30px rgba(15,23,42,.08);
+--primary:#4f46e5;
+--primary2:#7c3aed;
+--accent:#facc15;
+--bg:#f5f7fb;
+--card:#ffffff;
+--text:#172033;
+--muted:#64748b;
+--border:#e2e8f0;
+--shadow:0 8px 30px rgba(15,23,42,.08);
 }
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.5;
+background:var(--bg);
+color:var(--text);
+line-height:1.5;
 }
 
 body.dark{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --text:#f8fafc;
-  --muted:#cbd5e1;
-  --border:#334155;
-  --shadow:0 8px 30px rgba(0,0,0,.25);
+--bg:#0f172a;
+--card:#1e293b;
+--text:#f8fafc;
+--muted:#cbd5e1;
+--border:#334155;
+--shadow:0 8px 30px rgba(0,0,0,.25);
 }
 
 button,input,textarea,select{
-  font:inherit;
+font:inherit;
 }
 
 button{
-  cursor:pointer;
+cursor:pointer;
 }
 
 a{
-  color:inherit;
+color:inherit;
 }
 
 /* HEADER */
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:linear-gradient(135deg,var(--primary),var(--primary2));
-  color:white;
-  box-shadow:0 4px 20px rgba(0,0,0,.15);
+position:sticky;
+top:0;
+z-index:1000;
+background:linear-gradient(135deg,var(--primary),var(--primary2));
+color:white;
+box-shadow:0 4px 20px rgba(0,0,0,.15);
 }
 
 .nav{
-  max-width:1200px;
-  margin:auto;
-  padding:15px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
+max-width:1200px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
 }
 
 .logo{
-  font-size:21px;
-  font-weight:800;
-  text-decoration:none;
-  white-space:nowrap;
+font-size:21px;
+font-weight:800;
+text-decoration:none;
+white-space:nowrap;
 }
 
 .logo span{
-  color:var(--accent);
+color:var(--accent);
 }
 
 .nav-links{
-  display:flex;
-  align-items:center;
-  gap:18px;
+display:flex;
+align-items:center;
+gap:18px;
 }
 
 .nav-links a{
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
+text-decoration:none;
+font-weight:600;
+font-size:14px;
 }
 
 .theme-btn{
-  border:1px solid rgba(255,255,255,.35);
-  background:rgba(255,255,255,.12);
-  color:white;
-  width:40px;
-  height:40px;
-  border-radius:50%;
+border:1px solid rgba(255,255,255,.35);
+background:rgba(255,255,255,.12);
+color:white;
+width:40px;
+height:40px;
+border-radius:50%;
 }
 
 /* HERO */
 
 .hero{
-  background:
-    radial-gradient(circle at 10% 20%,rgba(255,255,255,.15),transparent 25%),
-    radial-gradient(circle at 90% 80%,rgba(250,204,21,.15),transparent 25%),
-    linear-gradient(135deg,#4f46e5,#7c3aed,#9333ea);
-  color:white;
-  text-align:center;
-  padding:70px 20px 85px;
+background:
+radial-gradient(circle at 10% 20%,rgba(255,255,255,.15),transparent 25%),
+radial-gradient(circle at 90% 80%,rgba(250,204,21,.15),transparent 25%),
+linear-gradient(135deg,#4f46e5,#7c3aed,#9333ea);
+color:white;
+text-align:center;
+padding:70px 20px 85px;
 }
 
 .badge{
-  display:inline-block;
-  background:rgba(255,255,255,.15);
-  border:1px solid rgba(255,255,255,.25);
-  padding:8px 15px;
-  border-radius:50px;
-  margin-bottom:18px;
-  font-size:13px;
-  font-weight:700;
+display:inline-block;
+background:rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.25);
+padding:8px 15px;
+border-radius:50px;
+margin-bottom:18px;
+font-size:13px;
+font-weight:700;
 }
 
 .hero h1{
-  font-size:clamp(36px,7vw,64px);
-  line-height:1.05;
-  margin-bottom:18px;
+font-size:clamp(36px,7vw,64px);
+line-height:1.05;
+margin-bottom:18px;
 }
 
 .hero h1 span{
-  color:var(--accent);
+color:var(--accent);
 }
 
 .hero p{
-  max-width:720px;
-  margin:auto;
-  font-size:18px;
-  opacity:.95;
+max-width:720px;
+margin:auto;
+font-size:18px;
+opacity:.95;
 }
 
 .search{
-  max-width:680px;
-  margin:30px auto 0;
-  display:flex;
-  padding:6px;
-  background:white;
-  border-radius:50px;
-  box-shadow:0 12px 35px rgba(0,0,0,.2);
+max-width:680px;
+margin:30px auto 0;
+display:flex;
+padding:6px;
+background:white;
+border-radius:50px;
+box-shadow:0 12px 35px rgba(0,0,0,.2);
 }
 
 .search input{
-  flex:1;
-  min-width:0;
-  border:0;
-  outline:0;
-  padding:14px 20px;
-  color:#111827;
-  background:transparent;
+flex:1;
+min-width:0;
+border:0;
+outline:0;
+padding:14px 20px;
+color:#111827;
+background:transparent;
 }
 
 .search button{
-  border:0;
-  border-radius:40px;
-  background:var(--accent);
-  color:#111827;
-  padding:0 22px;
-  font-weight:800;
+border:0;
+border-radius:40px;
+background:var(--accent);
+color:#111827;
+padding:0 22px;
+font-weight:800;
 }
 
 /* GENERAL */
 
 .container{
-  width:min(1200px,92%);
-  margin:auto;
+width:min(1200px,92%);
+margin:auto;
 }
 
 .section{
-  padding:55px 0;
+padding:55px 0;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:32px;
+text-align:center;
+margin-bottom:32px;
 }
 
 .section-title h2{
-  font-size:32px;
-  margin-bottom:7px;
+font-size:32px;
+margin-bottom:7px;
 }
 
 .section-title p{
-  color:var(--muted);
+color:var(--muted);
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
 }
 
 .card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:24px;
-  box-shadow:var(--shadow);
-  transition:.2s;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:20px;
+padding:24px;
+box-shadow:var(--shadow);
+transition:.2s;
 }
 
 .card:hover{
-  transform:translateY(-4px);
+transform:translateY(-4px);
 }
 
 .icon{
-  width:54px;
-  height:54px;
-  display:grid;
-  place-items:center;
-  background:#eef2ff;
-  border-radius:16px;
-  font-size:27px;
-  margin-bottom:15px;
+width:54px;
+height:54px;
+display:grid;
+place-items:center;
+background:#eef2ff;
+border-radius:16px;
+font-size:27px;
+margin-bottom:15px;
 }
 
 body.dark .icon{
-  background:#312e81;
+background:#312e81;
 }
 
 .card h3{
-  margin-bottom:7px;
+margin-bottom:7px;
 }
 
 .card p{
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:18px;
+color:var(--muted);
+font-size:14px;
+margin-bottom:18px;
 }
 
 .btn{
-  display:inline-block;
-  border:0;
-  text-decoration:none;
-  background:var(--primary);
-  color:white;
-  padding:10px 16px;
-  border-radius:10px;
-  font-weight:700;
-  font-size:14px;
+display:inline-block;
+border:0;
+text-decoration:none;
+background:var(--primary);
+color:white;
+padding:10px 16px;
+border-radius:10px;
+font-weight:700;
+font-size:14px;
 }
 
-.btn.secondary{
-  background:#e2e8f0;
-  color:#172033;
+.btn:hover{
+opacity:.9;
 }
 
-body.dark .btn.secondary{
-  background:#334155;
-  color:white;
+.btn.yellow{
+background:var(--accent);
+color:#111827;
 }
 
-.result{
-  margin-top:15px;
-  padding:12px;
-  border-radius:10px;
-  background:#eef2ff;
-  color:#3730a3;
-  font-weight:700;
-  display:none;
+.btn.green{
+background:#16a34a;
 }
 
-body.dark .result{
-  background:#312e81;
-  color:white;
+.btn.blue{
+background:#2563eb;
 }
 
 input,textarea,select{
-  width:100%;
-  padding:12px 13px;
-  border:1px solid var(--border);
-  border-radius:10px;
-  background:var(--card);
-  color:var(--text);
-  outline:none;
-  margin-bottom:10px;
+width:100%;
+padding:12px 13px;
+border:1px solid var(--border);
+border-radius:10px;
+background:var(--card);
+color:var(--text);
+outline:none;
+margin-bottom:10px;
 }
 
 input:focus,textarea:focus,select:focus{
-  border-color:var(--primary);
+border-color:var(--primary);
 }
 
 label{
-  display:block;
-  font-size:13px;
-  font-weight:700;
-  margin:5px 0;
-}
-
-/* TOOL SEARCH */
-
-.tool-card.hidden{
-  display:none;
-}
-
-.no-results{
-  display:none;
-  text-align:center;
-  padding:30px;
-  color:var(--muted);
+display:block;
+font-size:13px;
+font-weight:700;
+margin:5px 0;
 }
 
 /* STATS */
 
 .stats{
-  margin-top:-38px;
-  position:relative;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
+margin-top:-38px;
+position:relative;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
 }
 
 .stat{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:22px;
-  text-align:center;
-  box-shadow:var(--shadow);
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:22px;
+text-align:center;
+box-shadow:var(--shadow);
 }
 
 .stat strong{
-  display:block;
-  font-size:28px;
-  color:var(--primary);
+display:block;
+font-size:28px;
+color:var(--primary);
 }
 
 .stat span{
-  color:var(--muted);
-  font-size:14px;
+color:var(--muted);
+font-size:14px;
 }
 
-/* CALCULATOR */
+/* TOOLS */
+
+.tool-card.hidden{
+display:none;
+}
+
+.no-results{
+display:none;
+text-align:center;
+padding:30px;
+color:var(--muted);
+}
+
+/* CALCULATORS */
 
 .calc-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:20px;
 }
 
 .calc-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:22px;
-  box-shadow:var(--shadow);
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:22px;
+box-shadow:var(--shadow);
 }
 
 .calc-card h3{
-  margin-bottom:15px;
+margin-bottom:15px;
 }
 
 .calc-card button{
-  width:100%;
-  border:0;
-  padding:11px;
-  border-radius:10px;
-  background:var(--primary);
-  color:white;
-  font-weight:700;
+width:100%;
+border:0;
+padding:11px;
+border-radius:10px;
+background:var(--primary);
+color:white;
+font-weight:700;
 }
 
-/* FEATURE */
-
-.feature{
-  margin:10px 0 50px;
-  padding:45px 25px;
-  text-align:center;
-  color:white;
-  border-radius:25px;
-  background:linear-gradient(135deg,#111827,#312e81);
+.result{
+margin-top:15px;
+padding:12px;
+border-radius:10px;
+background:#eef2ff;
+color:#3730a3;
+font-weight:700;
+display:none;
 }
 
-.feature h2{
-  font-size:32px;
-  margin-bottom:10px;
+body.dark .result{
+background:#312e81;
+color:white;
 }
 
-.feature p{
-  color:#cbd5e1;
-  max-width:650px;
-  margin:0 auto 20px;
-}
-
-/* POMODORO */
+/* TIMER */
 
 .timer{
-  max-width:500px;
-  margin:auto;
-  text-align:center;
+max-width:500px;
+margin:auto;
+text-align:center;
 }
 
 .timer-display{
-  font-size:75px;
-  font-weight:800;
-  color:var(--primary);
-  margin:20px 0;
+font-size:75px;
+font-weight:800;
+color:var(--primary);
+margin:20px 0;
 }
 
 .timer-mode{
-  color:var(--muted);
-  font-weight:700;
+color:var(--muted);
+font-weight:700;
 }
 
 .timer-buttons{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .timer-buttons button{
-  border:0;
-  padding:11px 18px;
-  border-radius:10px;
-  background:var(--primary);
-  color:white;
-  font-weight:700;
+border:0;
+padding:11px 18px;
+border-radius:10px;
+background:var(--primary);
+color:white;
+font-weight:700;
 }
 
 .timer-buttons .reset{
-  background:#64748b;
+background:#64748b;
 }
 
 /* RESUME */
 
 .resume-layout{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
 }
 
 .resume-form,
 .resume-preview{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:25px;
-  box-shadow:var(--shadow);
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:25px;
+box-shadow:var(--shadow);
 }
 
 .resume-preview{
-  color:#111827;
-  background:white;
+color:#111827;
+background:white;
 }
 
 .resume-preview h2{
-  font-size:30px;
-  color:#111827;
+font-size:30px;
+color:#111827;
 }
 
-.resume-preview .resume-contact{
-  color:#475569;
-  margin-bottom:15px;
+.resume-contact{
+color:#475569;
+margin-bottom:15px;
 }
 
 .resume-preview h3{
-  margin-top:18px;
-  padding-bottom:5px;
-  border-bottom:2px solid #4f46e5;
-  color:#3730a3;
+margin-top:18px;
+padding-bottom:5px;
+border-bottom:2px solid #4f46e5;
+color:#3730a3;
 }
 
 .resume-preview p{
-  white-space:pre-line;
+white-space:pre-line;
 }
 
 .resume-actions{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:15px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:15px;
 }
 
 .resume-actions button{
-  border:0;
-  padding:11px 16px;
-  border-radius:10px;
-  background:var(--primary);
-  color:white;
-  font-weight:700;
+border:0;
+padding:11px 16px;
+border-radius:10px;
+background:var(--primary);
+color:white;
+font-weight:700;
 }
 
-/* RESOURCE */
+/* RESOURCE CARDS */
 
-.resource{
-  display:flex;
-  gap:15px;
-  align-items:center;
+.resource-card{
+display:flex;
+flex-direction:column;
 }
 
-.resource .icon{
-  flex-shrink:0;
-  margin:0;
+.resource-card .resource-top{
+display:flex;
+gap:14px;
+align-items:flex-start;
+}
+
+.resource-card .icon{
+flex-shrink:0;
+}
+
+.resource-card .resource-body{
+flex:1;
+}
+
+.resource-card .tag{
+display:inline-block;
+font-size:11px;
+font-weight:bold;
+padding:5px 8px;
+border-radius:20px;
+background:#eef2ff;
+color:#4338ca;
+margin-bottom:10px;
+}
+
+body.dark .resource-card .tag{
+background:#312e81;
+color:#ddd6fe;
+}
+
+.resource-card .btn{
+margin-top:auto;
+}
+
+/* FEATURE */
+
+.feature{
+margin:10px 0 50px;
+padding:45px 25px;
+text-align:center;
+color:white;
+border-radius:25px;
+background:linear-gradient(135deg,#111827,#312e81);
+}
+
+.feature h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.feature p{
+color:#cbd5e1;
+max-width:650px;
+margin:0 auto 20px;
 }
 
 /* FOOTER */
 
 footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  text-align:center;
-  padding:40px 20px;
+background:#0f172a;
+color:#cbd5e1;
+text-align:center;
+padding:45px 20px;
 }
 
 footer h2{
-  color:white;
-  margin-bottom:8px;
+color:white;
+margin-bottom:8px;
 }
 
 footer a{
-  color:#cbd5e1;
-  text-decoration:none;
-  margin:0 8px;
+color:#cbd5e1;
+text-decoration:none;
+margin:0 8px;
 }
 
 footer p{
-  font-size:14px;
-  margin:8px;
+font-size:14px;
+margin:8px;
 }
 
 /* MOBILE */
 
 @media(max-width:750px){
 
-  .nav{
-    padding:12px 15px;
-  }
+.nav{
+padding:12px 15px;
+}
 
-  .nav-links a{
-    display:none;
-  }
+.nav-links a{
+display:none;
+}
 
-  .hero{
-    padding:55px 18px 70px;
-  }
+.hero{
+padding:55px 18px 70px;
+}
 
-  .hero p{
-    font-size:16px;
-  }
+.hero p{
+font-size:16px;
+}
 
-  .search{
-    border-radius:18px;
-  }
+.search{
+border-radius:18px;
+}
 
-  .search button{
-    padding:0 15px;
-  }
+.search button{
+padding:0 15px;
+}
 
-  .stats{
-    grid-template-columns:repeat(2,1fr);
-  }
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
 
-  .section{
-    padding:42px 0;
-  }
+.section{
+padding:42px 0;
+}
 
-  .section-title h2{
-    font-size:27px;
-  }
+.section-title h2{
+font-size:27px;
+}
 
-  .resume-layout{
-    grid-template-columns:1fr;
-  }
+.resume-layout{
+grid-template-columns:1fr;
+}
 
-  .timer-display{
-    font-size:60px;
-  }
+.timer-display{
+font-size:60px;
+}
+
 }
 
 @media(max-width:420px){
 
-  .stats{
-    grid-template-columns:1fr 1fr;
-  }
+.logo{
+font-size:18px;
+}
 
-  .stat{
-    padding:17px 10px;
-  }
+.stat{
+padding:17px 10px;
+}
 
-  .logo{
-    font-size:18px;
-  }
 }
 
 /* PRINT RESUME */
 
 @media print{
 
-  body *{
-    visibility:hidden !important;
-  }
-
-  #resumePreview,
-  #resumePreview *{
-    visibility:visible !important;
-  }
-
-  #resumePreview{
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    box-shadow:none;
-    border:0;
-  }
+body *{
+visibility:hidden !important;
 }
+
+#resumePreview,
+#resumePreview *{
+visibility:visible !important;
+}
+
+#resumePreview{
+position:absolute;
+left:0;
+top:0;
+width:100%;
+box-shadow:none;
+border:0;
+}
+
+}
+
+/* BACK TO TOP */
+
+.top-btn{
+position:fixed;
+right:18px;
+bottom:18px;
+width:45px;
+height:45px;
+border:0;
+border-radius:50%;
+background:var(--primary);
+color:white;
+font-size:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+z-index:500;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-  <div class="nav">
 
-    <a class="logo" href="#home">
-      🎓 Student<span>Tools</span> India
-    </a>
+<div class="nav">
 
-    <nav class="nav-links">
-      <a href="#calculators">Calculators</a>
-      <a href="#study">Study</a>
-      <a href="#resume">Resume</a>
-      <a href="#career">Career</a>
-    </nav>
+<a class="logo" href="#home">
+🎓 Student<span>Tools</span> India
+</a>
 
-    <button class="theme-btn" onclick="toggleDark()" title="Dark Mode">
-      🌙
-    </button>
+<nav class="nav-links">
 
-  </div>
+<a href="#calculators">Calculators</a>
+
+<a href="#study">Study</a>
+
+<a href="#resources">Resources</a>
+
+<a href="#resume">Resume</a>
+
+</nav>
+
+<button class="theme-btn"
+onclick="toggleDark()"
+title="Dark Mode">
+🌙
+</button>
+
+</div>
+
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero" id="home">
 
-  <div class="badge">✨ 100% FREE • Made for Students 🇮🇳</div>
+<div class="badge">
+✨ FREE TOOLS • STUDY • CAREER • JOBS 🇮🇳
+</div>
 
-  <h1>
-    Smart Tools for<br>
-    <span>Smart Students</span>
-  </h1>
+<h1>
+Smart Tools for<br>
+<span>Smart Students</span>
+</h1>
 
-  <p>
-    Free calculators, study tools, resume builder and career resources —
-    all in one place.
-  </p>
+<p>
+Free calculators, study tools, resume builder,
+internships, jobs and learning resources —
+all in one place.
+</p>
 
-  <div class="search">
-    <input
-      id="toolSearch"
-      type="search"
-      placeholder="🔍 Search percentage, CGPA, EMI, resume..."
-      oninput="searchTools()"
-    >
-    <button onclick="searchTools()">Search</button>
-  </div>
+<div class="search">
+
+<input
+id="toolSearch"
+type="search"
+placeholder="🔍 Search percentage, CGPA, EMI, resume..."
+oninput="searchTools()">
+
+<button onclick="searchTools()">
+Search
+</button>
+
+</div>
 
 </section>
 
 
 <main class="container">
 
+
+<!-- STATS -->
+
 <section class="stats">
 
-  <div class="stat">
-    <strong>100%</strong>
-    <span>Free Tools</span>
-  </div>
+<div class="stat">
+<strong>100%</strong>
+<span>Free Tools</span>
+</div>
 
-  <div class="stat">
-    <strong>24/7</strong>
-    <span>Available</span>
-  </div>
+<div class="stat">
+<strong>24/7</strong>
+<span>Available</span>
+</div>
 
-  <div class="stat">
-    <strong>📱</strong>
-    <span>Mobile Friendly</span>
-  </div>
+<div class="stat">
+<strong>📱</strong>
+<span>Mobile Friendly</span>
+</div>
 
-  <div class="stat">
-    <strong>🇮🇳</strong>
-    <span>Made for India</span>
-  </div>
+<div class="stat">
+<strong>🇮🇳</strong>
+<span>For Indian Students</span>
+</div>
 
 </section>
 
@@ -715,75 +790,176 @@ footer p{
 
 <section class="section">
 
-  <div class="section-title">
-    <h2>🔥 Popular Student Tools</h2>
-    <p>Quick tools for everyday student needs</p>
-  </div>
+<div class="section-title">
 
-  <div class="grid" id="toolGrid">
+<h2>🔥 Popular Student Tools</h2>
 
-    <div class="card tool-card" data-search="percentage marks calculator">
-      <div class="icon">％</div>
-      <h3>Percentage Calculator</h3>
-      <p>Calculate your marks percentage instantly.</p>
-      <a href="#percentage" class="btn">Open Tool</a>
-    </div>
+<p>
+Useful tools for everyday student needs
+</p>
 
-    <div class="card tool-card" data-search="cgpa grade calculator">
-      <div class="icon">🎓</div>
-      <h3>CGPA Calculator</h3>
-      <p>Calculate CGPA and percentage from your grades.</p>
-      <a href="#cgpa" class="btn">Open Tool</a>
-    </div>
+</div>
 
-    <div class="card tool-card" data-search="marks total average calculator">
-      <div class="icon">📊</div>
-      <h3>Marks Calculator</h3>
-      <p>Calculate total marks, percentage and average.</p>
-      <a href="#marks" class="btn">Open Tool</a>
-    </div>
 
-    <div class="card tool-card" data-search="emi loan calculator">
-      <div class="icon">₹</div>
-      <h3>EMI Calculator</h3>
-      <p>Calculate monthly loan EMI.</p>
-      <a href="#emi" class="btn">Open Tool</a>
-    </div>
+<div class="grid" id="toolGrid">
 
-    <div class="card tool-card" data-search="gst tax calculator">
-      <div class="icon">🧾</div>
-      <h3>GST Calculator</h3>
-      <p>Calculate GST amount and total price.</p>
-      <a href="#gst" class="btn">Open Tool</a>
-    </div>
 
-    <div class="card tool-card" data-search="study timer pomodoro">
-      <div class="icon">⏱️</div>
-      <h3>Study Timer</h3>
-      <p>Use Pomodoro sessions for focused studying.</p>
-      <a href="#study" class="btn">Start Timer</a>
-    </div>
+<div class="card tool-card"
+data-search="percentage marks calculator">
 
-    <div class="card tool-card" data-search="resume cv builder job">
-      <div class="icon">📄</div>
-      <h3>Resume Builder</h3>
-      <p>Create a professional resume from your phone.</p>
-      <a href="#resume" class="btn">Create Resume</a>
-    </div>
+<div class="icon">％</div>
 
-    <div class="card tool-card" data-search="bmi health calculator">
-      <div class="icon">⚖️</div>
-      <h3>BMI Calculator</h3>
-      <p>Calculate BMI using height and weight.</p>
-      <a href="#bmi" class="btn">Open Tool</a>
-    </div>
+<h3>Percentage Calculator</h3>
 
-  </div>
+<p>
+Calculate your marks percentage instantly.
+</p>
 
-  <div class="no-results" id="noResults">
-    <h3>😕 No tool found</h3>
-    <p>Try percentage, CGPA, EMI, resume, marks or study.</p>
-  </div>
+<a href="#percentage" class="btn">
+Open Tool
+</a>
+
+</div>
+
+
+<div class="card tool-card"
+data-search="cgpa grade calculator">
+
+<div class="icon">🎓</div>
+
+<h3>CGPA Calculator</h3>
+
+<p>
+Calculate CGPA and approximate percentage.
+</p>
+
+<a href="#cgpa" class="btn">
+Open Tool
+</a>
+
+</div>
+
+
+<div class="card tool-card"
+data-search="marks total average">
+
+<div class="icon">📊</div>
+
+<h3>Marks Calculator</h3>
+
+<p>
+Calculate total marks and average.
+</p>
+
+<a href="#marks" class="btn">
+Open Tool
+</a>
+
+</div>
+
+
+<div class="card tool-card"
+data-search="emi loan calculator">
+
+<div class="icon">₹</div>
+
+<h3>EMI Calculator</h3>
+
+<p>
+Calculate monthly loan EMI.
+</p>
+
+<a href="#emi" class="btn">
+Open Tool
+</a>
+
+</div>
+
+
+<div class="card tool-card"
+data-search="gst tax calculator">
+
+<div class="icon">🧾</div>
+
+<h3>GST Calculator</h3>
+
+<p>
+Calculate GST amount and final price.
+</p>
+
+<a href="#gst" class="btn">
+Open Tool
+</a>
+
+</div>
+
+
+<div class="card tool-card"
+data-search="study timer pomodoro">
+
+<div class="icon">⏱️</div>
+
+<h3>Study Timer</h3>
+
+<p>
+Focus using the Pomodoro study method.
+</p>
+
+<a href="#study" class="btn">
+Start Timer
+</a>
+
+</div>
+
+
+<div class="card tool-card"
+data-search="resume cv builder job">
+
+<div class="icon">📄</div>
+
+<h3>Resume Builder</h3>
+
+<p>
+Create a professional resume from your phone.
+</p>
+
+<a href="#resume" class="btn">
+Create Resume
+</a>
+
+</div>
+
+
+<div class="card tool-card"
+data-search="bmi health calculator">
+
+<div class="icon">⚖️</div>
+
+<h3>BMI Calculator</h3>
+
+<p>
+Calculate BMI using height and weight.
+</p>
+
+<a href="#bmi" class="btn">
+Open Tool
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="no-results" id="noResults">
+
+<h3>😕 No tool found</h3>
+
+<p>
+Try percentage, CGPA, EMI, resume, marks or study.
+</p>
+
+</div>
 
 </section>
 
@@ -792,204 +968,302 @@ footer p{
 
 <section class="section" id="calculators">
 
-  <div class="section-title">
-    <h2>🧮 Student Calculators</h2>
-    <p>Calculate everything quickly</p>
-  </div>
+<div class="section-title">
 
+<h2>🧮 Student Calculators</h2>
 
-  <div class="calc-grid">
+<p>
+Calculate quickly and easily
+</p>
 
-    <!-- Percentage -->
+</div>
 
-    <div class="calc-card" id="percentage">
 
-      <h3>％ Percentage</h3>
+<div class="calc-grid">
 
-      <label>Obtained Marks</label>
-      <input id="pObtained" type="number" placeholder="e.g. 450">
 
-      <label>Total Marks</label>
-      <input id="pTotal" type="number" placeholder="e.g. 500">
+<!-- PERCENTAGE -->
 
-      <button onclick="percentageCalc()">Calculate</button>
+<div class="calc-card" id="percentage">
 
-      <div class="result" id="pResult"></div>
+<h3>％ Percentage Calculator</h3>
 
-    </div>
+<label>Obtained Marks</label>
 
+<input
+id="pObtained"
+type="number"
+placeholder="450">
 
-    <!-- CGPA -->
+<label>Total Marks</label>
 
-    <div class="calc-card" id="cgpa">
+<input
+id="pTotal"
+type="number"
+placeholder="500">
 
-      <h3>🎓 CGPA Calculator</h3>
+<button onclick="percentageCalc()">
+Calculate Percentage
+</button>
 
-      <label>Enter CGPA</label>
-      <input id="cgpaInput" type="number" step="0.01" placeholder="e.g. 7.57">
+<div class="result" id="pResult"></div>
 
-      <button onclick="cgpaCalc()">Calculate</button>
+</div>
 
-      <div class="result" id="cgpaResult"></div>
 
-      <small style="color:var(--muted)">
-        Approximation: Percentage = CGPA × 9.5
-      </small>
+<!-- CGPA -->
 
-    </div>
+<div class="calc-card" id="cgpa">
 
+<h3>🎓 CGPA Calculator</h3>
 
-    <!-- Marks -->
+<label>Enter CGPA</label>
 
-    <div class="calc-card" id="marks">
+<input
+id="cgpaInput"
+type="number"
+step="0.01"
+placeholder="7.57">
 
-      <h3>📊 Marks Calculator</h3>
+<button onclick="cgpaCalc()">
+Calculate
+</button>
 
-      <label>Subject 1</label>
-      <input class="markInput" type="number" placeholder="Marks">
+<div class="result" id="cgpaResult"></div>
 
-      <label>Subject 2</label>
-      <input class="markInput" type="number" placeholder="Marks">
+<small style="color:var(--muted)">
+Approximation: Percentage = CGPA × 9.5
+</small>
 
-      <label>Subject 3</label>
-      <input class="markInput" type="number" placeholder="Marks">
+</div>
 
-      <label>Subject 4</label>
-      <input class="markInput" type="number" placeholder="Marks">
 
-      <label>Subject 5</label>
-      <input class="markInput" type="number" placeholder="Marks">
+<!-- MARKS -->
 
-      <button onclick="marksCalc()">Calculate</button>
+<div class="calc-card" id="marks">
 
-      <div class="result" id="marksResult"></div>
+<h3>📊 Marks Calculator</h3>
 
-    </div>
+<label>Subject 1</label>
+<input class="markInput" type="number" placeholder="Marks">
 
+<label>Subject 2</label>
+<input class="markInput" type="number" placeholder="Marks">
 
-    <!-- EMI -->
+<label>Subject 3</label>
+<input class="markInput" type="number" placeholder="Marks">
 
-    <div class="calc-card" id="emi">
+<label>Subject 4</label>
+<input class="markInput" type="number" placeholder="Marks">
 
-      <h3>₹ EMI Calculator</h3>
+<label>Subject 5</label>
+<input class="markInput" type="number" placeholder="Marks">
 
-      <label>Loan Amount ₹</label>
-      <input id="loanAmount" type="number" placeholder="100000">
+<button onclick="marksCalc()">
+Calculate
+</button>
 
-      <label>Annual Interest %</label>
-      <input id="loanRate" type="number" step="0.01" placeholder="10">
+<div class="result" id="marksResult"></div>
 
-      <label>Tenure Months</label>
-      <input id="loanMonths" type="number" placeholder="24">
+</div>
 
-      <button onclick="emiCalc()">Calculate</button>
 
-      <div class="result" id="emiResult"></div>
+<!-- EMI -->
 
-    </div>
+<div class="calc-card" id="emi">
 
+<h3>₹ EMI Calculator</h3>
 
-    <!-- GST -->
+<label>Loan Amount ₹</label>
 
-    <div class="calc-card" id="gst">
+<input
+id="loanAmount"
+type="number"
+placeholder="100000">
 
-      <h3>🧾 GST Calculator</h3>
+<label>Annual Interest %</label>
 
-      <label>Amount ₹</label>
-      <input id="gstAmount" type="number" placeholder="1000">
+<input
+id="loanRate"
+type="number"
+step="0.01"
+placeholder="10">
 
-      <label>GST %</label>
-      <input id="gstRate" type="number" placeholder="18">
+<label>Tenure Months</label>
 
-      <button onclick="gstCalc()">Calculate</button>
+<input
+id="loanMonths"
+type="number"
+placeholder="24">
 
-      <div class="result" id="gstResult"></div>
+<button onclick="emiCalc()">
+Calculate EMI
+</button>
 
-    </div>
+<div class="result" id="emiResult"></div>
 
+</div>
 
-    <!-- BMI -->
 
-    <div class="calc-card" id="bmi">
+<!-- GST -->
 
-      <h3>⚖️ BMI Calculator</h3>
+<div class="calc-card" id="gst">
 
-      <label>Weight kg</label>
-      <input id="bmiWeight" type="number" placeholder="60">
+<h3>🧾 GST Calculator</h3>
 
-      <label>Height cm</label>
-      <input id="bmiHeight" type="number" placeholder="170">
+<label>Amount ₹</label>
 
-      <button onclick="bmiCalc()">Calculate</button>
+<input
+id="gstAmount"
+type="number"
+placeholder="1000">
 
-      <div class="result" id="bmiResult"></div>
+<label>GST %</label>
 
-    </div>
+<input
+id="gstRate"
+type="number"
+placeholder="18">
 
+<button onclick="gstCalc()">
+Calculate GST
+</button>
 
-    <!-- Discount -->
+<div class="result" id="gstResult"></div>
 
-    <div class="calc-card">
+</div>
 
-      <h3>🏷️ Discount Calculator</h3>
 
-      <label>Original Price ₹</label>
-      <input id="discountPrice" type="number" placeholder="1000">
+<!-- BMI -->
 
-      <label>Discount %</label>
-      <input id="discountRate" type="number" placeholder="20">
+<div class="calc-card" id="bmi">
 
-      <button onclick="discountCalc()">Calculate</button>
+<h3>⚖️ BMI Calculator</h3>
 
-      <div class="result" id="discountResult"></div>
+<label>Weight kg</label>
 
-    </div>
+<input
+id="bmiWeight"
+type="number"
+placeholder="60">
 
+<label>Height cm</label>
 
-    <!-- Simple Interest -->
+<input
+id="bmiHeight"
+type="number"
+placeholder="170">
 
-    <div class="calc-card">
+<button onclick="bmiCalc()">
+Calculate BMI
+</button>
 
-      <h3>➕ Simple Interest</h3>
+<div class="result" id="bmiResult"></div>
 
-      <label>Principal ₹</label>
-      <input id="siPrincipal" type="number" placeholder="10000">
+</div>
 
-      <label>Rate %</label>
-      <input id="siRate" type="number" placeholder="8">
 
-      <label>Years</label>
-      <input id="siYears" type="number" placeholder="2">
+<!-- DISCOUNT -->
 
-      <button onclick="simpleInterest()">Calculate</button>
+<div class="calc-card">
 
-      <div class="result" id="siResult"></div>
+<h3>🏷️ Discount Calculator</h3>
 
-    </div>
+<label>Original Price ₹</label>
 
+<input
+id="discountPrice"
+type="number"
+placeholder="1000">
 
-    <!-- Compound -->
+<label>Discount %</label>
 
-    <div class="calc-card">
+<input
+id="discountRate"
+type="number"
+placeholder="20">
 
-      <h3>📈 Compound Interest</h3>
+<button onclick="discountCalc()">
+Calculate
+</button>
 
-      <label>Principal ₹</label>
-      <input id="ciPrincipal" type="number" placeholder="10000">
+<div class="result" id="discountResult"></div>
 
-      <label>Rate %</label>
-      <input id="ciRate" type="number" placeholder="8">
+</div>
 
-      <label>Years</label>
-      <input id="ciYears" type="number" placeholder="2">
 
-      <button onclick="compoundInterest()">Calculate</button>
+<!-- SIMPLE INTEREST -->
 
-      <div class="result" id="ciResult"></div>
+<div class="calc-card">
 
-    </div>
+<h3>➕ Simple Interest</h3>
 
-  </div>
+<label>Principal ₹</label>
+
+<input
+id="siPrincipal"
+type="number"
+placeholder="10000">
+
+<label>Rate %</label>
+
+<input
+id="siRate"
+type="number"
+placeholder="8">
+
+<label>Years</label>
+
+<input
+id="siYears"
+type="number"
+placeholder="2">
+
+<button onclick="simpleInterest()">
+Calculate
+</button>
+
+<div class="result" id="siResult"></div>
+
+</div>
+
+
+<!-- COMPOUND -->
+
+<div class="calc-card">
+
+<h3>📈 Compound Interest</h3>
+
+<label>Principal ₹</label>
+
+<input
+id="ciPrincipal"
+type="number"
+placeholder="10000">
+
+<label>Rate %</label>
+
+<input
+id="ciRate"
+type="number"
+placeholder="8">
+
+<label>Years</label>
+
+<input
+id="ciYears"
+type="number"
+placeholder="2">
+
+<button onclick="compoundInterest()">
+Calculate
+</button>
+
+<div class="result" id="ciResult"></div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -998,34 +1272,382 @@ footer p{
 
 <section class="section" id="study">
 
-  <div class="section-title">
-    <h2>⏱️ Pomodoro Study Timer</h2>
-    <p>Study with focused sessions and short breaks.</p>
-  </div>
+<div class="section-title">
 
-  <div class="card timer">
+<h2>⏱️ Pomodoro Study Timer</h2>
 
-    <div class="timer-mode" id="timerMode">
-      Focus Session — 25 minutes
-    </div>
+<p>
+Study with focused sessions and short breaks.
+</p>
 
-    <div class="timer-display" id="timerDisplay">
-      25:00
-    </div>
+</div>
 
-    <div class="timer-buttons">
 
-      <button onclick="startTimer()">▶ Start</button>
+<div class="card timer">
 
-      <button onclick="pauseTimer()">⏸ Pause</button>
+<div class="timer-mode" id="timerMode">
+Focus Session — 25 minutes
+</div>
 
-      <button class="reset" onclick="resetTimer()">↻ Reset</button>
+<div class="timer-display" id="timerDisplay">
+25:00
+</div>
 
-      <button onclick="setBreak()">☕ Break</button>
+<div class="timer-buttons">
 
-    </div>
+<button onclick="startTimer()">
+▶ Start
+</button>
 
-  </div>
+<button onclick="pauseTimer()">
+⏸ Pause
+</button>
+
+<button class="reset" onclick="resetTimer()">
+↻ Reset
+</button>
+
+<button onclick="setBreak()">
+☕ Break
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STUDY RESOURCES -->
+
+<section class="section" id="resources">
+
+<div class="section-title">
+
+<h2>📚 Study Resources</h2>
+
+<p>
+Learn new skills from trusted educational resources.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card resource-card">
+
+<div class="resource-top">
+
+<div class="icon">🎓</div>
+
+<div class="resource-body">
+
+<span class="tag">
+OFFICIAL LEARNING
+</span>
+
+<h3>NPTEL Courses</h3>
+
+<p>
+Learn engineering, programming, mathematics,
+electronics and many other subjects through
+courses from IITs and IISc.
+</p>
+
+</div>
+
+</div>
+
+<a
+href="https://www.nptel.ac.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+
+Explore NPTEL →
+
+</a>
+
+</div>
+
+
+<div class="card resource-card">
+
+<div class="resource-top">
+
+<div class="icon">⚡</div>
+
+<div class="resource-body">
+
+<span class="tag">
+ENGINEERING
+</span>
+
+<h3>Electrical & Electronics</h3>
+
+<p>
+Find courses and learning resources useful for
+Electrical and Electronics Engineering students.
+</p>
+
+</div>
+
+</div>
+
+<a
+href="https://www.nptel.ac.in/courses"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+
+Learn Electrical →
+
+</a>
+
+</div>
+
+
+<div class="card resource-card">
+
+<div class="resource-top">
+
+<div class="icon">💻</div>
+
+<div class="resource-body">
+
+<span class="tag">
+TECHNOLOGY
+</span>
+
+<h3>Programming & Technology</h3>
+
+<p>
+Improve programming, computer science and
+technology skills with online courses.
+</p>
+
+</div>
+
+</div>
+
+<a
+href="https://www.nptel.ac.in/courses"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+
+Learn Programming →
+
+</a>
+
+</div>
+
+
+<div class="card resource-card">
+
+<div class="resource-top">
+
+<div class="icon">📖</div>
+
+<div class="resource-body">
+
+<span class="tag">
+SELF STUDY
+</span>
+
+<h3>Online Learning</h3>
+
+<p>
+Build useful technical knowledge and improve
+your skills through structured online learning.
+</p>
+
+</div>
+
+</div>
+
+<a
+href="https://www.nptel.ac.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+
+Start Learning →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- JOBS & INTERNSHIPS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>💼 Jobs & Internships</h2>
+
+<p>
+Find opportunities through official and trusted portals.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card resource-card">
+
+<div class="resource-top">
+
+<div class="icon">🎓</div>
+
+<div class="resource-body">
+
+<span class="tag">
+INTERNSHIPS
+</span>
+
+<h3>AICTE Internship Portal</h3>
+
+<p>
+Find internships for students and fresh engineers
+through the official AICTE Internship Portal.
+</p>
+
+</div>
+
+</div>
+
+<a
+href="https://internship.aicte-india.org/Internshala.php"
+target="_blank"
+rel="noopener noreferrer"
+class="btn green">
+
+Find Internships →
+
+</a>
+
+</div>
+
+
+<div class="card resource-card">
+
+<div class="resource-top">
+
+<div class="icon">🇮🇳</div>
+
+<div class="resource-body">
+
+<span class="tag">
+GOVERNMENT
+</span>
+
+<h3>National Career Service</h3>
+
+<p>
+Government of India's career and employment
+portal for job seekers and employers.
+</p>
+
+</div>
+
+</div>
+
+<a
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn blue">
+
+Find Jobs →
+
+</a>
+
+</div>
+
+
+<div class="card resource-card">
+
+<div class="resource-top">
+
+<div class="icon">⚡</div>
+
+<div class="resource-body">
+
+<span class="tag">
+EEE / ENGINEERING
+</span>
+
+<h3>Electrical Engineer Careers</h3>
+
+<p>
+Prepare for electrical engineering careers with
+technical learning, resume building and job resources.
+</p>
+
+</div>
+
+</div>
+
+<a
+href="https://www.ncs.gov.in/job-seeker/Pages/default.aspx"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+
+Search Jobs →
+
+</a>
+
+</div>
+
+
+<div class="card resource-card">
+
+<div class="resource-top">
+
+<div class="icon">🚀</div>
+
+<div class="resource-body">
+
+<span class="tag">
+FRESHERS
+</span>
+
+<h3>Freshers Career Resources</h3>
+
+<p>
+Find job opportunities, career information,
+guidance and employment resources.
+</p>
+
+</div>
+
+</div>
+
+<a
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+
+Explore Careers →
+
+</a>
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -1034,880 +1656,1000 @@ footer p{
 
 <section class="section" id="resume">
 
-  <div class="section-title">
-    <h2>📄 Free Resume Builder</h2>
-    <p>Create your resume on your phone and print/save it as PDF.</p>
-  </div>
+<div class="section-title">
+
+<h2>📄 Free Resume Builder</h2>
+
+<p>
+Create your resume from your phone and save it as PDF.
+</p>
+
+</div>
 
 
-  <div class="resume-layout">
-
-    <div class="resume-form">
-
-      <h3>Enter Your Details</h3>
-
-      <label>Full Name</label>
-      <input id="rName" placeholder="Your Name">
-
-      <label>Phone</label>
-      <input id="rPhone" placeholder="+91 XXXXX XXXXX">
-
-      <label>Email</label>
-      <input id="rEmail" placeholder="you@example.com">
-
-      <label>Location</label>
-      <input id="rLocation" placeholder="Bihar, India">
-
-      <label>Career Objective</label>
-      <textarea id="rObjective" rows="4"
-        placeholder="Write a short career objective..."></textarea>
-
-      <label>Education</label>
-      <textarea id="rEducation" rows="5"
-        placeholder="B.Tech in Electrical & Electronics Engineering&#10;University Name&#10;Year | CGPA"></textarea>
-
-      <label>Skills</label>
-      <textarea id="rSkills" rows="4"
-        placeholder="Electrical Engineering, MS Office, Communication..."></textarea>
-
-      <label>Experience / Internship</label>
-      <textarea id="rExperience" rows="5"
-        placeholder="Company / Internship details..."></textarea>
-
-      <label>Projects</label>
-      <textarea id="rProjects" rows="5"
-        placeholder="Project title and description..."></textarea>
-
-      <label>Achievements / Certifications</label>
-      <textarea id="rAchievements" rows="4"
-        placeholder="Achievements, certifications, awards..."></textarea>
-
-      <div class="resume-actions">
-
-        <button onclick="updateResume()">
-          👁️ Preview
-        </button>
-
-        <button onclick="saveResume()">
-          💾 Save
-        </button>
-
-        <button onclick="loadResume()">
-          📂 Load
-        </button>
-
-      </div>
-
-    </div>
+<div class="resume-layout">
 
 
-    <div>
+<div class="resume-form">
 
-      <div class="resume-preview" id="resumePreview">
+<h3>Enter Your Details</h3>
 
-        <h2 id="previewName">Your Name</h2>
+<label>Full Name</label>
 
-        <div class="resume-contact" id="previewContact">
-          Phone • Email • Location
-        </div>
+<input
+id="rName"
+placeholder="Your Name">
 
-        <h3>Career Objective</h3>
-        <p id="previewObjective">
-          Your career objective will appear here.
-        </p>
 
-        <h3>Education</h3>
-        <p id="previewEducation">
-          Your education details will appear here.
-        </p>
+<label>Phone</label>
 
-        <h3>Skills</h3>
-        <p id="previewSkills">
-          Your skills will appear here.
-        </p>
+<input
+id="rPhone"
+placeholder="+91 XXXXX XXXXX">
 
-        <h3>Experience / Internship</h3>
-        <p id="previewExperience">
-          Your experience will appear here.
-        </p>
 
-        <h3>Projects</h3>
-        <p id="previewProjects">
-          Your projects will appear here.
-        </p>
+<label>Email</label>
 
-        <h3>Achievements / Certifications</h3>
-        <p id="previewAchievements">
-          Your achievements will appear here.
-        </p>
+<input
+id="rEmail"
+placeholder="you@example.com">
 
-      </div>
 
-      <div class="resume-actions">
+<label>Location</label>
 
-        <button onclick="window.print()">
-          🖨️ Print / Save PDF
-        </button>
+<input
+id="rLocation"
+placeholder="Bihar, India">
 
-        <button onclick="clearResume()">
-          🗑️ Clear
-        </button>
 
-      </div>
+<label>Career Objective</label>
 
-    </div>
+<textarea
+id="rObjective"
+rows="4"
+placeholder="Write a short career objective..."></textarea>
 
-  </div>
+
+<label>Education</label>
+
+<textarea
+id="rEducation"
+rows="5"
+placeholder="B.Tech in Electrical & Electronics Engineering
+University Name
+Year | CGPA"></textarea>
+
+
+<label>Skills</label>
+
+<textarea
+id="rSkills"
+rows="4"
+placeholder="Electrical Engineering, MS Office, Communication..."></textarea>
+
+
+<label>Experience / Internship</label>
+
+<textarea
+id="rExperience"
+rows="5"
+placeholder="Company / Internship details..."></textarea>
+
+
+<label>Projects</label>
+
+<textarea
+id="rProjects"
+rows="5"
+placeholder="Project title and description..."></textarea>
+
+
+<label>Achievements / Certifications</label>
+
+<textarea
+id="rAchievements"
+rows="4"
+placeholder="Achievements, certifications, awards..."></textarea>
+
+
+<div class="resume-actions">
+
+<button onclick="updateResume()">
+👁️ Preview
+</button>
+
+<button onclick="saveResume()">
+💾 Save
+</button>
+
+<button onclick="loadResume()">
+📂 Load
+</button>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="resume-preview" id="resumePreview">
+
+<h2 id="previewName">
+Your Name
+</h2>
+
+<div class="resume-contact" id="previewContact">
+Phone • Email • Location
+</div>
+
+<h3>Career Objective</h3>
+
+<p id="previewObjective">
+Your career objective will appear here.
+</p>
+
+<h3>Education</h3>
+
+<p id="previewEducation">
+Your education details will appear here.
+</p>
+
+<h3>Skills</h3>
+
+<p id="previewSkills">
+Your skills will appear here.
+</p>
+
+<h3>Experience / Internship</h3>
+
+<p id="previewExperience">
+Your experience will appear here.
+</p>
+
+<h3>Projects</h3>
+
+<p id="previewProjects">
+Your projects will appear here.
+</p>
+
+<h3>Achievements / Certifications</h3>
+
+<p id="previewAchievements">
+Your achievements will appear here.
+</p>
+
+</div>
+
+
+<div class="resume-actions">
+
+<button onclick="window.print()">
+🖨️ Print / Save PDF
+</button>
+
+<button onclick="clearResume()">
+🗑️ Clear
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- RESOURCES -->
+<!-- ABOUT -->
 
-<section class="section" id="career">
-
-  <div class="section-title">
-    <h2>🚀 Student & Career Resources</h2>
-    <p>Build your skills and career step by step.</p>
-  </div>
-
-
-  <div class="grid">
-
-    <div class="card resource">
-      <div class="icon">📚</div>
-      <div>
-        <h3>Study Resources</h3>
-        <p>Notes, syllabus, books and learning resources.</p>
-      </div>
-    </div>
-
-    <div class="card resource">
-      <div class="icon">💼</div>
-      <div>
-        <h3>Private Jobs</h3>
-        <p>Explore opportunities for freshers and students.</p>
-      </div>
-    </div>
-
-    <div class="card resource">
-      <div class="icon">🏛️</div>
-      <div>
-        <h3>Government Jobs</h3>
-        <p>Useful resources for government job preparation.</p>
-      </div>
-    </div>
-
-    <div class="card resource">
-      <div class="icon">🎯</div>
-      <div>
-        <h3>Interview Preparation</h3>
-        <p>Prepare for HR and technical interviews.</p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
+<section class="section">
 
 <div class="feature">
 
-  <h2>🌟 Your Student Journey Starts Here</h2>
+<h2>
+🌟 Student Tools India
+</h2>
 
-  <p>
-    Study smarter, calculate faster, create a professional resume
-    and prepare for your future.
-  </p>
+<p>
+Study smarter, calculate faster, create a professional resume,
+find internships and discover career resources.
+</p>
 
-  <a href="#calculators" class="btn"
-     style="background:#facc15;color:#111827">
-    Explore Tools →
-  </a>
+<a
+href="#calculators"
+class="btn yellow">
+
+Explore Tools →
+
+</a>
 
 </div>
+
+</section>
+
 
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-  <h2>🎓 Student Tools India</h2>
+<h2>
+🎓 Student Tools India
+</h2>
 
-  <p>Free digital tools and resources for students.</p>
+<p>
+Free digital tools and resources for Indian students.
+</p>
 
-  <p>Made with ❤️ for Indian Students 🇮🇳</p>
+<p>
+Made with ❤️ for Students 🇮🇳
+</p>
 
-  <p style="margin-top:20px">
-    <a href="#home">Home</a>
-    <a href="#calculators">Calculators</a>
-    <a href="#study">Study</a>
-    <a href="#resume">Resume</a>
-    <a href="#career">Career</a>
-  </p>
+<p style="margin-top:20px">
 
-  <p style="margin-top:20px">
-    © 2026 Student Tools India. All Rights Reserved.
-  </p>
+<a href="#home">Home</a>
+
+<a href="#calculators">Calculators</a>
+
+<a href="#study">Study</a>
+
+<a href="#resources">Resources</a>
+
+<a href="#resume">Resume</a>
+
+</p>
+
+<p style="margin-top:20px">
+© 2026 Student Tools India. All Rights Reserved.
+</p>
 
 </footer>
 
 
+<!-- BACK TO TOP -->
+
+<button
+class="top-btn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})"
+title="Back to top">
+
+↑
+
+</button>
+
+
 <script>
 
-/* =========================
-   DARK MODE
-========================= */
+/* DARK MODE */
 
 function toggleDark(){
 
-  document.body.classList.toggle("dark");
+document.body.classList.toggle("dark");
 
-  localStorage.setItem(
-    "darkMode",
-    document.body.classList.contains("dark")
-  );
+localStorage.setItem(
+"darkMode",
+document.body.classList.contains("dark")
+);
 
 }
 
-if(localStorage.getItem("darkMode") === "true"){
-  document.body.classList.add("dark");
+if(localStorage.getItem("darkMode")==="true"){
+
+document.body.classList.add("dark");
+
 }
 
 
-/* =========================
-   SEARCH
-========================= */
+/* SEARCH */
 
 function searchTools(){
 
-  const query =
-    document.getElementById("toolSearch")
-    .value
-    .toLowerCase()
-    .trim();
+const query=
+document.getElementById("toolSearch")
+.value
+.toLowerCase()
+.trim();
 
-  const cards =
-    document.querySelectorAll(".tool-card");
+const cards=
+document.querySelectorAll(".tool-card");
 
-  let found = 0;
+let found=0;
 
-  cards.forEach(card => {
+cards.forEach(card=>{
 
-    const text =
-      (card.innerText + " " + card.dataset.search)
-      .toLowerCase();
+const text=
+(
+card.innerText+
+" "+
+card.dataset.search
+)
+.toLowerCase();
 
-    if(text.includes(query)){
+if(text.includes(query)){
 
-      card.classList.remove("hidden");
-      found++;
+card.classList.remove("hidden");
 
-    }else{
+found++;
 
-      card.classList.add("hidden");
+}else{
 
-    }
+card.classList.add("hidden");
 
-  });
+}
 
-  document.getElementById("noResults").style.display =
-    found === 0 ? "block" : "none";
+});
+
+
+document.getElementById("noResults").style.display=
+found===0 ? "block":"none";
 
 }
 
 
-/* =========================
-   HELPER
-========================= */
+/* RESULT */
 
 function showResult(id,text){
 
-  const el = document.getElementById(id);
+const el=document.getElementById(id);
 
-  el.innerHTML = text;
-  el.style.display = "block";
+el.innerHTML=text;
+
+el.style.display="block";
 
 }
 
 
-/* =========================
-   PERCENTAGE
-========================= */
+/* PERCENTAGE */
 
 function percentageCalc(){
 
-  const obtained =
-    parseFloat(document.getElementById("pObtained").value);
+const obtained=
+parseFloat(
+document.getElementById("pObtained").value
+);
 
-  const total =
-    parseFloat(document.getElementById("pTotal").value);
+const total=
+parseFloat(
+document.getElementById("pTotal").value
+);
 
-  if(!isFinite(obtained) || !isFinite(total) || total <= 0){
+if(!isFinite(obtained)||!isFinite(total)||total<=0){
 
-    showResult("pResult","Please enter valid marks.");
-    return;
+showResult(
+"pResult",
+"Please enter valid marks."
+);
 
-  }
+return;
 
-  const percentage =
-    (obtained / total) * 100;
+}
 
-  showResult(
-    "pResult",
-    `Percentage: ${percentage.toFixed(2)}%`
-  );
+const percentage=
+(obtained/total)*100;
+
+showResult(
+"pResult",
+`Percentage: ${percentage.toFixed(2)}%`
+);
 
 }
 
 
-/* =========================
-   CGPA
-========================= */
+/* CGPA */
 
 function cgpaCalc(){
 
-  const cgpa =
-    parseFloat(document.getElementById("cgpaInput").value);
+const cgpa=
+parseFloat(
+document.getElementById("cgpaInput").value
+);
 
-  if(!isFinite(cgpa) || cgpa < 0){
+if(!isFinite(cgpa)||cgpa<0){
 
-    showResult("cgpaResult","Please enter a valid CGPA.");
-    return;
+showResult(
+"cgpaResult",
+"Please enter a valid CGPA."
+);
 
-  }
+return;
 
-  const percentage =
-    cgpa * 9.5;
+}
 
-  showResult(
-    "cgpaResult",
-    `CGPA: ${cgpa.toFixed(2)}<br>
-     Approx. Percentage: ${percentage.toFixed(2)}%`
-  );
+const percentage=cgpa*9.5;
+
+showResult(
+"cgpaResult",
+`CGPA: ${cgpa.toFixed(2)}<br>
+Approx. Percentage: ${percentage.toFixed(2)}%`
+);
 
 }
 
 
-/* =========================
-   MARKS
-========================= */
+/* MARKS */
 
 function marksCalc(){
 
-  const inputs =
-    document.querySelectorAll(".markInput");
+const inputs=
+document.querySelectorAll(".markInput");
 
-  let marks = [];
+let marks=[];
 
-  inputs.forEach(input => {
+inputs.forEach(input=>{
 
-    const value = parseFloat(input.value);
+const value=parseFloat(input.value);
 
-    if(isFinite(value)){
-      marks.push(value);
-    }
+if(isFinite(value)){
 
-  });
+marks.push(value);
 
-  if(marks.length === 0){
+}
 
-    showResult(
-      "marksResult",
-      "Enter at least one subject mark."
-    );
+});
 
-    return;
+if(marks.length===0){
 
-  }
+showResult(
+"marksResult",
+"Enter at least one subject mark."
+);
 
-  const total =
-    marks.reduce((a,b)=>a+b,0);
+return;
 
-  const average =
-    total / marks.length;
+}
 
-  showResult(
-    "marksResult",
-    `Total: ${total.toFixed(2)}<br>
-     Average: ${average.toFixed(2)}`
-  );
+const total=
+marks.reduce((a,b)=>a+b,0);
+
+const average=
+total/marks.length;
+
+showResult(
+"marksResult",
+`Total: ${total.toFixed(2)}<br>
+Average: ${average.toFixed(2)}`
+);
 
 }
 
 
-/* =========================
-   EMI
-========================= */
+/* EMI */
 
 function emiCalc(){
 
-  const P =
-    parseFloat(document.getElementById("loanAmount").value);
+const P=
+parseFloat(
+document.getElementById("loanAmount").value
+);
 
-  const annual =
-    parseFloat(document.getElementById("loanRate").value);
+const annual=
+parseFloat(
+document.getElementById("loanRate").value
+);
 
-  const n =
-    parseInt(document.getElementById("loanMonths").value);
+const n=
+parseInt(
+document.getElementById("loanMonths").value
+);
 
-  if(!isFinite(P) || !isFinite(annual) || !isFinite(n) ||
-     P <= 0 || n <= 0){
+if(!isFinite(P)||!isFinite(annual)||!isFinite(n)
+||P<=0||n<=0){
 
-    showResult("emiResult","Please enter valid values.");
-    return;
+showResult(
+"emiResult",
+"Please enter valid values."
+);
 
-  }
+return;
 
-  const r =
-    annual / 12 / 100;
+}
 
-  let emi;
+const r=annual/12/100;
 
-  if(r === 0){
+let emi;
 
-    emi = P/n;
+if(r===0){
 
-  }else{
+emi=P/n;
 
-    emi =
-      P*r*Math.pow(1+r,n) /
-      (Math.pow(1+r,n)-1);
+}else{
 
-  }
+emi=
+P*r*Math.pow(1+r,n)/
+(Math.pow(1+r,n)-1);
 
-  const total =
-    emi*n;
+}
 
-  const interest =
-    total-P;
+const total=emi*n;
 
-  showResult(
-    "emiResult",
-    `Monthly EMI: ₹${emi.toFixed(2)}<br>
-     Total Payment: ₹${total.toFixed(2)}<br>
-     Total Interest: ₹${interest.toFixed(2)}`
-  );
+const interest=total-P;
+
+showResult(
+"emiResult",
+`Monthly EMI: ₹${emi.toFixed(2)}<br>
+Total Payment: ₹${total.toFixed(2)}<br>
+Total Interest: ₹${interest.toFixed(2)}`
+);
 
 }
 
 
-/* =========================
-   GST
-========================= */
+/* GST */
 
 function gstCalc(){
 
-  const amount =
-    parseFloat(document.getElementById("gstAmount").value);
+const amount=
+parseFloat(
+document.getElementById("gstAmount").value
+);
 
-  const rate =
-    parseFloat(document.getElementById("gstRate").value);
+const rate=
+parseFloat(
+document.getElementById("gstRate").value
+);
 
-  if(!isFinite(amount) || !isFinite(rate)){
+if(!isFinite(amount)||!isFinite(rate)){
 
-    showResult("gstResult","Please enter valid values.");
-    return;
+showResult(
+"gstResult",
+"Please enter valid values."
+);
 
-  }
+return;
 
-  const gst =
-    amount*rate/100;
+}
 
-  const total =
-    amount+gst;
+const gst=amount*rate/100;
 
-  showResult(
-    "gstResult",
-    `GST: ₹${gst.toFixed(2)}<br>
-     Total: ₹${total.toFixed(2)}`
-  );
+const total=amount+gst;
+
+showResult(
+"gstResult",
+`GST: ₹${gst.toFixed(2)}<br>
+Total: ₹${total.toFixed(2)}`
+);
 
 }
 
 
-/* =========================
-   BMI
-========================= */
+/* BMI */
 
 function bmiCalc(){
 
-  const weight =
-    parseFloat(document.getElementById("bmiWeight").value);
+const weight=
+parseFloat(
+document.getElementById("bmiWeight").value
+);
 
-  const heightCm =
-    parseFloat(document.getElementById("bmiHeight").value);
+const heightCm=
+parseFloat(
+document.getElementById("bmiHeight").value
+);
 
-  if(!isFinite(weight) || !isFinite(heightCm) ||
-     weight <= 0 || heightCm <= 0){
+if(!isFinite(weight)||!isFinite(heightCm)
+||weight<=0||heightCm<=0){
 
-    showResult("bmiResult","Please enter valid values.");
-    return;
+showResult(
+"bmiResult",
+"Please enter valid values."
+);
 
-  }
+return;
 
-  const height =
-    heightCm/100;
+}
 
-  const bmi =
-    weight/(height*height);
+const height=heightCm/100;
 
-  let category;
+const bmi=weight/(height*height);
 
-  if(bmi < 18.5){
-    category="Underweight";
-  }else if(bmi < 25){
-    category="Normal range";
-  }else if(bmi < 30){
-    category="Overweight";
-  }else{
-    category="Obesity range";
-  }
+let category;
 
-  showResult(
-    "bmiResult",
-    `BMI: ${bmi.toFixed(1)}<br>
-     Category: ${category}`
-  );
+if(bmi<18.5){
+
+category="Underweight";
+
+}else if(bmi<25){
+
+category="Normal range";
+
+}else if(bmi<30){
+
+category="Overweight";
+
+}else{
+
+category="Obesity range";
+
+}
+
+showResult(
+"bmiResult",
+`BMI: ${bmi.toFixed(1)}<br>
+Category: ${category}`
+);
 
 }
 
 
-/* =========================
-   DISCOUNT
-========================= */
+/* DISCOUNT */
 
 function discountCalc(){
 
-  const price =
-    parseFloat(document.getElementById("discountPrice").value);
+const price=
+parseFloat(
+document.getElementById("discountPrice").value
+);
 
-  const rate =
-    parseFloat(document.getElementById("discountRate").value);
+const rate=
+parseFloat(
+document.getElementById("discountRate").value
+);
 
-  if(!isFinite(price) || !isFinite(rate)){
+if(!isFinite(price)||!isFinite(rate)){
 
-    showResult(
-      "discountResult",
-      "Please enter valid values."
-    );
+showResult(
+"discountResult",
+"Please enter valid values."
+);
 
-    return;
+return;
 
-  }
+}
 
-  const discount =
-    price*rate/100;
+const discount=price*rate/100;
 
-  const finalPrice =
-    price-discount;
+const finalPrice=price-discount;
 
-  showResult(
-    "discountResult",
-    `Discount: ₹${discount.toFixed(2)}<br>
-     Final Price: ₹${finalPrice.toFixed(2)}`
-  );
+showResult(
+"discountResult",
+`Discount: ₹${discount.toFixed(2)}<br>
+Final Price: ₹${finalPrice.toFixed(2)}`
+);
 
 }
 
 
-/* =========================
-   SIMPLE INTEREST
-========================= */
+/* SIMPLE INTEREST */
 
 function simpleInterest(){
 
-  const P =
-    parseFloat(document.getElementById("siPrincipal").value);
+const P=
+parseFloat(
+document.getElementById("siPrincipal").value
+);
 
-  const R =
-    parseFloat(document.getElementById("siRate").value);
+const R=
+parseFloat(
+document.getElementById("siRate").value
+);
 
-  const T =
-    parseFloat(document.getElementById("siYears").value);
+const T=
+parseFloat(
+document.getElementById("siYears").value
+);
 
-  if(!isFinite(P)||!isFinite(R)||!isFinite(T)){
+if(!isFinite(P)||!isFinite(R)||!isFinite(T)){
 
-    showResult("siResult","Please enter valid values.");
-    return;
+showResult(
+"siResult",
+"Please enter valid values."
+);
 
-  }
+return;
 
-  const SI =
-    P*R*T/100;
+}
 
-  const total =
-    P+SI;
+const SI=P*R*T/100;
 
-  showResult(
-    "siResult",
-    `Interest: ₹${SI.toFixed(2)}<br>
-     Amount: ₹${total.toFixed(2)}`
-  );
+const total=P+SI;
+
+showResult(
+"siResult",
+`Interest: ₹${SI.toFixed(2)}<br>
+Amount: ₹${total.toFixed(2)}`
+);
 
 }
 
 
-/* =========================
-   COMPOUND INTEREST
-========================= */
+/* COMPOUND INTEREST */
 
 function compoundInterest(){
 
-  const P =
-    parseFloat(document.getElementById("ciPrincipal").value);
+const P=
+parseFloat(
+document.getElementById("ciPrincipal").value
+);
 
-  const R =
-    parseFloat(document.getElementById("ciRate").value);
+const R=
+parseFloat(
+document.getElementById("ciRate").value
+);
 
-  const T =
-    parseFloat(document.getElementById("ciYears").value);
+const T=
+parseFloat(
+document.getElementById("ciYears").value
+);
 
-  if(!isFinite(P)||!isFinite(R)||!isFinite(T)){
+if(!isFinite(P)||!isFinite(R)||!isFinite(T)){
 
-    showResult("ciResult","Please enter valid values.");
-    return;
+showResult(
+"ciResult",
+"Please enter valid values."
+);
 
-  }
+return;
 
-  const amount =
-    P*Math.pow(1+R/100,T);
+}
 
-  const interest =
-    amount-P;
+const amount=
+P*Math.pow(1+R/100,T);
 
-  showResult(
-    "ciResult",
-    `Interest: ₹${interest.toFixed(2)}<br>
-     Amount: ₹${amount.toFixed(2)}`
-  );
+const interest=amount-P;
+
+showResult(
+"ciResult",
+`Interest: ₹${interest.toFixed(2)}<br>
+Amount: ₹${amount.toFixed(2)}`
+);
 
 }
 
 
-/* =========================
-   POMODORO
-========================= */
+/* POMODORO */
 
-let timerSeconds = 25*60;
-let timerInterval = null;
-let breakMode = false;
+let timerSeconds=25*60;
+
+let timerInterval=null;
+
+let breakMode=false;
+
 
 function updateTimerDisplay(){
 
-  const minutes =
-    Math.floor(timerSeconds/60);
+const minutes=
+Math.floor(timerSeconds/60);
 
-  const seconds =
-    timerSeconds%60;
+const seconds=
+timerSeconds%60;
 
-  document.getElementById("timerDisplay").textContent =
-    `${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+document.getElementById("timerDisplay")
+.textContent=
+`${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
 
 }
+
 
 function startTimer(){
 
-  if(timerInterval) return;
+if(timerInterval)return;
 
-  timerInterval =
-    setInterval(()=>{
+timerInterval=setInterval(()=>{
 
-      if(timerSeconds > 0){
+if(timerSeconds>0){
 
-        timerSeconds--;
-        updateTimerDisplay();
+timerSeconds--;
 
-      }else{
+updateTimerDisplay();
 
-        clearInterval(timerInterval);
-        timerInterval=null;
+}else{
 
-        alert(
-          breakMode
-          ? "Break finished! Ready to study?"
-          : "Focus session finished! Take a short break."
-        );
+clearInterval(timerInterval);
 
-        if(!breakMode){
+timerInterval=null;
 
-          setBreak();
+alert(
+breakMode
+?"Break finished! Ready to study?"
+:"Focus session finished! Take a short break."
+);
 
-        }else{
+if(!breakMode){
 
-          resetTimer();
+setBreak();
 
-        }
+}else{
 
-      }
-
-    },1000);
+resetTimer();
 
 }
+
+}
+
+},1000);
+
+}
+
 
 function pauseTimer(){
 
-  clearInterval(timerInterval);
-  timerInterval=null;
+clearInterval(timerInterval);
+
+timerInterval=null;
 
 }
+
 
 function resetTimer(){
 
-  pauseTimer();
+pauseTimer();
 
-  breakMode=false;
-  timerSeconds=25*60;
+breakMode=false;
 
-  document.getElementById("timerMode").textContent =
-    "Focus Session — 25 minutes";
+timerSeconds=25*60;
 
-  updateTimerDisplay();
+document.getElementById("timerMode")
+.textContent=
+"Focus Session — 25 minutes";
+
+updateTimerDisplay();
 
 }
+
 
 function setBreak(){
 
-  pauseTimer();
+pauseTimer();
 
-  breakMode=true;
-  timerSeconds=5*60;
+breakMode=true;
 
-  document.getElementById("timerMode").textContent =
-    "Short Break — 5 minutes";
+timerSeconds=5*60;
 
-  updateTimerDisplay();
+document.getElementById("timerMode")
+.textContent=
+"Short Break — 5 minutes";
+
+updateTimerDisplay();
 
 }
 
 
-/* =========================
-   RESUME BUILDER
-========================= */
+/* RESUME */
 
 function getResumeData(){
 
-  return {
+return{
 
-    name:document.getElementById("rName").value,
+name:document.getElementById("rName").value,
 
-    phone:document.getElementById("rPhone").value,
+phone:document.getElementById("rPhone").value,
 
-    email:document.getElementById("rEmail").value,
+email:document.getElementById("rEmail").value,
 
-    location:document.getElementById("rLocation").value,
+location:document.getElementById("rLocation").value,
 
-    objective:document.getElementById("rObjective").value,
+objective:document.getElementById("rObjective").value,
 
-    education:document.getElementById("rEducation").value,
+education:document.getElementById("rEducation").value,
 
-    skills:document.getElementById("rSkills").value,
+skills:document.getElementById("rSkills").value,
 
-    experience:document.getElementById("rExperience").value,
+experience:document.getElementById("rExperience").value,
 
-    projects:document.getElementById("rProjects").value,
+projects:document.getElementById("rProjects").value,
 
-    achievements:document.getElementById("rAchievements").value
+achievements:document.getElementById("rAchievements").value
 
-  };
-
-}
-
-function safeText(value){
-
-  return value
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
+};
 
 }
+
 
 function updateResume(){
 
-  const r=getResumeData();
+const r=getResumeData();
 
-  document.getElementById("previewName").textContent =
-    r.name || "Your Name";
+document.getElementById("previewName")
+.textContent=r.name||"Your Name";
 
-  document.getElementById("previewContact").textContent =
-    [r.phone,r.email,r.location]
-    .filter(Boolean)
-    .join(" • ") || "Phone • Email • Location";
+document.getElementById("previewContact")
+.textContent=
+[r.phone,r.email,r.location]
+.filter(Boolean)
+.join(" • ")
+||"Phone • Email • Location";
 
-  document.getElementById("previewObjective").textContent =
-    r.objective || "Your career objective will appear here.";
+document.getElementById("previewObjective")
+.textContent=
+r.objective
+||"Your career objective will appear here.";
 
-  document.getElementById("previewEducation").textContent =
-    r.education || "Your education details will appear here.";
+document.getElementById("previewEducation")
+.textContent=
+r.education
+||"Your education details will appear here.";
 
-  document.getElementById("previewSkills").textContent =
-    r.skills || "Your skills will appear here.";
+document.getElementById("previewSkills")
+.textContent=
+r.skills
+||"Your skills will appear here.";
 
-  document.getElementById("previewExperience").textContent =
-    r.experience || "Your experience will appear here.";
+document.getElementById("previewExperience")
+.textContent=
+r.experience
+||"Your experience will appear here.";
 
-  document.getElementById("previewProjects").textContent =
-    r.projects || "Your projects will appear here.";
+document.getElementById("previewProjects")
+.textContent=
+r.projects
+||"Your projects will appear here.";
 
-  document.getElementById("previewAchievements").textContent =
-    r.achievements || "Your achievements will appear here.";
+document.getElementById("previewAchievements")
+.textContent=
+r.achievements
+||"Your achievements will appear here.";
 
 }
+
 
 function saveResume(){
 
-  updateResume();
+updateResume();
 
-  localStorage.setItem(
-    "studentToolsResume",
-    JSON.stringify(getResumeData())
-  );
+localStorage.setItem(
+"studentToolsResume",
+JSON.stringify(getResumeData())
+);
 
-  alert("Resume saved in this browser.");
+alert("Resume saved in this browser.");
 
 }
+
 
 function loadResume(){
 
-  const saved =
-    localStorage.getItem("studentToolsResume");
+const saved=
+localStorage.getItem("studentToolsResume");
 
-  if(!saved){
+if(!saved){
 
-    alert("No saved resume found.");
-    return;
+alert("No saved resume found.");
 
-  }
-
-  const r=JSON.parse(saved);
-
-  document.getElementById("rName").value=r.name||"";
-  document.getElementById("rPhone").value=r.phone||"";
-  document.getElementById("rEmail").value=r.email||"";
-  document.getElementById("rLocation").value=r.location||"";
-  document.getElementById("rObjective").value=r.objective||"";
-  document.getElementById("rEducation").value=r.education||"";
-  document.getElementById("rSkills").value=r.skills||"";
-  document.getElementById("rExperience").value=r.experience||"";
-  document.getElementById("rProjects").value=r.projects||"";
-  document.getElementById("rAchievements").value=r.achievements||"";
-
-  updateResume();
+return;
 
 }
 
+const r=JSON.parse(saved);
+
+document.getElementById("rName").value=r.name||"";
+
+document.getElementById("rPhone").value=r.phone||"";
+
+document.getElementById("rEmail").value=r.email||"";
+
+document.getElementById("rLocation").value=r.location||"";
+
+document.getElementById("rObjective").value=r.objective||"";
+
+document.getElementById("rEducation").value=r.education||"";
+
+document.getElementById("rSkills").value=r.skills||"";
+
+document.getElementById("rExperience").value=r.experience||"";
+
+document.getElementById("rProjects").value=r.projects||"";
+
+document.getElementById("rAchievements").value=r.achievements||"";
+
+updateResume();
+
+}
+
+
 function clearResume(){
 
-  if(!confirm("Clear all resume information?")) return;
+if(!confirm("Clear all resume information?"))return;
 
-  document.querySelectorAll(".resume-form input,.resume-form textarea")
-    .forEach(el=>el.value="");
+document
+.querySelectorAll(".resume-form input,.resume-form textarea")
+.forEach(el=>el.value="");
 
-  localStorage.removeItem("studentToolsResume");
+localStorage.removeItem("studentToolsResume");
 
-  updateResume();
+updateResume();
 
 }
 
@@ -1915,6 +2657,7 @@ function clearResume(){
 /* INITIALIZE */
 
 updateTimerDisplay();
+
 updateResume();
 
 </script>
