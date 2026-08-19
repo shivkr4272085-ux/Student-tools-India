@@ -1,44 +1,632 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Student Tools India - free calculators, resume builder, study resources and career tools for students.">
-<meta name="theme-color" content="#081735">
-<title>Student Tools India | Smart Tools for Smart Students</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Tools India | Free Tools for Students</title>
+
+<meta name="description" content="Student Tools India - Free calculators, study tools, resume tools, career resources and useful tools for Indian students.">
+<meta name="keywords" content="student tools India, student calculator, resume maker, study tools, career tools, student resources">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#172033;
+}
+
+header{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#fde047;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:600;
+}
+
+.hero{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#9333ea);
+    color:white;
+    padding:70px 20px 90px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:clamp(34px,7vw,62px);
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#fde047;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.6;
+    opacity:.95;
+}
+
+.search-box{
+    max-width:650px;
+    margin:30px auto 0;
+    display:flex;
+    background:white;
+    padding:7px;
+    border-radius:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.search-box input{
+    flex:1;
+    border:0;
+    outline:none;
+    padding:15px 20px;
+    font-size:16px;
+    border-radius:50px;
+}
+
+.search-box button{
+    border:0;
+    background:#facc15;
+    color:#111827;
+    padding:0 24px;
+    border-radius:40px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    padding:55px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#64748b;
+}
+
+.tools{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(15,23,42,.08);
+    transition:.25s;
+    border:1px solid #e5e7eb;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(15,23,42,.15);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    background:#eef2ff;
+    margin-bottom:17px;
+}
+
+.card h3{
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.card p{
+    color:#64748b;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:18px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#4f46e5;
+    color:white;
+    padding:10px 17px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#3730a3;
+}
+
+.feature{
+    background:#111827;
+    color:white;
+    border-radius:25px;
+    padding:45px 30px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.feature h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.feature p{
+    color:#cbd5e1;
+    max-width:700px;
+    margin:0 auto 25px;
+    line-height:1.6;
+}
+
+.feature .btn{
+    background:#facc15;
+    color:#111827;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+    margin-top:-35px;
+    position:relative;
+}
+
+.stat{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+
+.stat h3{
+    font-size:30px;
+    color:#4f46e5;
+}
+
+.stat p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+footer{
+    background:#0f172a;
+    color:#cbd5e1;
+    padding:40px 20px;
+    text-align:center;
+    margin-top:40px;
+}
+
+footer h2{
+    color:white;
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:8px 0;
+    font-size:14px;
+}
+
+.footer-links{
+    margin-top:20px;
+}
+
+.footer-links a{
+    color:#cbd5e1;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+.no-results{
+    display:none;
+    text-align:center;
+    padding:30px;
+    color:#64748b;
+}
+
+@media(max-width:650px){
+
+    header{
+        padding:15px 5%;
+    }
+
+    nav a{
+        margin-left:8px;
+        font-size:13px;
+    }
+
+    .hero{
+        padding:55px 18px 70px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .search-box{
+        border-radius:18px;
+    }
+
+    .search-box input{
+        min-width:0;
+    }
+
+    .search-box button{
+        padding:0 16px;
+    }
+
+    .section{
+        padding:40px 0;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+
+    .feature h2{
+        font-size:26px;
+    }
+}
+</style>
 </head>
+
 <body>
-<header><nav><a class="logo" href="#home">🎓 <span>Student Tools India<small>All Tools for Students, One Place!</small></span></a>
-<div class="navlinks"><a href="#home">Home</a><a href="#tools">Calculators</a><a href="#resume">Resume</a><a href="#study">Study Zone</a><a href="#jobs">Jobs</a></div></nav></header>
 
-<section id="home" class="hero"><div class="heroText"><div class="pill">✨ 100% FREE • Made for Students</div><h1>Smart Tools for<br><span>Smart Students</span></h1><p>Free calculators, resume tools, study resources and career resources — all in one place.</p><div class="actions"><a class="btn primary" href="#tools">Explore Tools →</a><a class="btn light" href="#resume">📄 Build Resume</a></div></div><div class="art"><div class="blob"></div><div class="emoji e1">👩‍🎓</div><div class="emoji e2">👨‍🎓</div><div class="emoji e3">🧑‍🎓</div><i>💡</i><i>✏️</i><i>📚</i></div></section>
+<header>
 
-<section class="benefits"><div>👥 <b>100% Free</b><small>No paid tools</small></div><div>🛡️ <b>Easy to Use</b><small>Simple & fast</small></div><div>🚀 <b>Save Time</b><small>Results in seconds</small></div><div>❤️ <b>For Students</b><small>Student-focused</small></div></section>
+<div class="logo">
+🎓 Student<span>Tools</span> India
+</div>
 
-<main>
-<section id="tools" class="section"><div class="head"><div><span>CALCULATE IN SECONDS</span><h2>🔥 Popular Calculators</h2></div></div><div class="grid">
-<div class="card"><strong>％</strong><h3>Percentage</h3><p>Calculate your percentage.</p><input id="p1" type="number" placeholder="Obtained marks"><input id="p2" type="number" placeholder="Total marks"><button onclick="percent()">Calculate</button><b id="pr"></b></div>
-<div class="card"><strong>🎂</strong><h3>Age Calculator</h3><p>Find your exact age.</p><input id="dob" type="date"><button onclick="age()">Calculate</button><b id="ar"></b></div>
-<div class="card"><strong>₹</strong><h3>EMI Calculator</h3><p>Calculate monthly EMI.</p><input id="ep" type="number" placeholder="Loan amount ₹"><input id="er" type="number" placeholder="Interest %"><input id="en" type="number" placeholder="Months"><button onclick="emi()">Calculate</button><b id="emir"></b></div>
-<div class="card"><strong>GST</strong><h3>GST Calculator</h3><p>Calculate GST and total.</p><input id="gp" type="number" placeholder="Amount ₹"><input id="gr" type="number" placeholder="GST %"><button onclick="gst()">Calculate</button><b id="gstr"></b></div>
-<div class="card"><strong>♥</strong><h3>BMI Calculator</h3><p>Check your BMI.</p><input id="bw" type="number" placeholder="Weight kg"><input id="bh" type="number" placeholder="Height cm"><button onclick="bmi()">Calculate</button><b id="bmir"></b></div>
-<div class="card"><strong>％</strong><h3>Discount</h3><p>Find discount and final price.</p><input id="dp" type="number" placeholder="Original price ₹"><input id="dr" type="number" placeholder="Discount %"><button onclick="discount()">Calculate</button><b id="drx"></b></div>
-<div class="card"><strong>＋</strong><h3>Simple Interest</h3><p>Calculate simple interest.</p><input id="sp" type="number" placeholder="Principal ₹"><input id="sr" type="number" placeholder="Rate %"><input id="st" type="number" placeholder="Years"><button onclick="si()">Calculate</button><b id="sir"></b></div>
-<div class="card"><strong>↗</strong><h3>Compound Interest</h3><p>Calculate compound interest.</p><input id="cp" type="number" placeholder="Principal ₹"><input id="cr" type="number" placeholder="Rate %"><input id="ct" type="number" placeholder="Years"><button onclick="ci()">Calculate</button><b id="cir"></b></div>
-<div class="card"><strong>₹</strong><h3>Salary Calculator</h3><p>Convert monthly to annual salary.</p><input id="sal" type="number" placeholder="Monthly salary ₹"><button onclick="salary()">Calculate</button><b id="salr"></b></div>
-<div class="card"><strong>▣</strong><h3>Loan Calculator</h3><p>Estimate simple loan interest.</p><input id="lp" type="number" placeholder="Loan amount ₹"><input id="lr" type="number" placeholder="Interest %"><input id="lt" type="number" placeholder="Years"><button onclick="loan()">Calculate</button><b id="lrx"></b></div>
-</div></section>
+<nav>
+<a href="#tools">Tools</a>
+<a href="#career">Career</a>
+<a href="#about">About</a>
+</nav>
 
-<section id="resume" class="resume section"><div><span>FREE CAREER TOOL</span><h2>📄 Build Your Professional Resume</h2><p>Create a clean resume from your phone and print/save it as PDF.</p><a class="btn primary" href="#resumeForm">Create Resume Now →</a></div><div class="resumeIcon">📄<br>✏️ 📚</div></section>
+</header>
 
-<section id="resumeForm" class="resumeBuilder section"><h2>Free Resume Builder</h2><div class="resumeGrid"><div class="form"><label>Full Name<input id="name" placeholder="Your full name"></label><label>Professional Title<input id="title" placeholder="e.g. Electrical Engineer"></label><label>Phone<input id="phone" placeholder="+91 9876543210"></label><label>Email<input id="email" placeholder="you@example.com"></label><label>Location<input id="location" placeholder="City, State"></label><label>Career Objective<textarea id="objective" placeholder="Write 2–3 lines about your career goal"></textarea></label><label>Education<textarea id="education" placeholder="Degree, college, year"></textarea></label><label>Skills<textarea id="skills" placeholder="Skill 1, Skill 2, Skill 3"></textarea></label><label>Experience<textarea id="experience" placeholder="Company, role and responsibilities"></textarea></label><label>Projects<textarea id="projects" placeholder="Project name and description"></textarea></label><button onclick="previewResume()">Preview Resume</button><button class="green" onclick="window.print()">Print / Save PDF</button></div>
-<div class="paper"><h1 id="rn">Your Name</h1><h3 id="rt">Professional Title</h3><p id="rc">Phone • Email • Location</p><hr><h4>PROFILE</h4><p id="ro">Your objective.</p><h4>EDUCATION</h4><p id="red">Your education.</p><h4>SKILLS</h4><p id="rs">Your skills.</p><h4>EXPERIENCE</h4><p id="rex">Your experience.</p><h4>PROJECTS</h4><p id="rpj">Your projects.</p></div></div></section>
 
-<section id="study" class="section"><div class="head"><div><span>LEARN BETTER</span><h2>📚 Study Zone</h2></div></div><div class="resources"><div>📄<b>Syllabus</b><small>Course & subject resources</small></div><div>📝<b>Notes</b><small>Important study notes</small></div><div>📘<b>Question Papers</b><small>Previous year papers</small></div><div>📚<b>Books</b><small>Learning resources</small></div><div>🎓<b>Scholarships</b><small>Opportunities & guidance</small></div></div></section>
+<section class="hero">
 
-<section id="jobs" class="jobs"><div><span>CAREER OPPORTUNITIES</span><h2>💼 Job Resources</h2><p>Use this section for verified government jobs, private jobs, internships and career guides.</p><a class="btn yellow" href="#">View Job Updates →</a></div><div class="joblist">✓ Government Jobs<br>✓ Private Jobs<br>✓ Internships<br>✓ Work From Home Jobs</div></section>
+<h1>Everything Students Need,<br><span>In One Place.</span></h1>
 
-<section class="section info"><h2>About Student Tools India</h2><p>Student Tools India is designed to provide simple, useful and free online tools for students and job seekers. Always verify important financial or career information before making decisions.</p><h2>Contact</h2><p>Add your email or social links here when you're ready.</p></section>
+<p>
+Free and useful tools for Indian students — study, career, resume,
+calculators, planning and much more.
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Search student tools..."
+onkeyup="searchTools()">
+
+<button onclick="searchTools()">Search</button>
+
+</div>
+
+</section>
+
+
+<main class="container">
+
+
+<div class="stats">
+
+<div class="stat">
+<h3>100%</h3>
+<p>Free</p>
+</div>
+
+<div class="stat">
+<h3>24/7</h3>
+<p>Available</p>
+</div>
+
+<div class="stat">
+<h3>📱</h3>
+<p>Mobile Friendly</p>
+</div>
+
+<div class="stat">
+<h3>🇮🇳</h3>
+<p>Made for India</p>
+</div>
+
+</div>
+
+
+<section class="section" id="tools">
+
+<div class="section-title">
+<h2>🔥 Popular Student Tools</h2>
+<p>Useful tools you can access anytime</p>
+</div>
+
+
+<div class="tools" id="toolGrid">
+
+
+<div class="card tool">
+<div class="icon">🧮</div>
+<h3>Student Calculator</h3>
+<p>Quickly calculate percentages, averages and other student calculations.</p>
+<a href="#" class="btn">Open Tool</a>
+</div>
+
+
+<div class="card tool">
+<div class="icon">📊</div>
+<h3>Percentage Calculator</h3>
+<p>Calculate marks percentage quickly and easily.</p>
+<a href="#" class="btn">Calculate</a>
+</div>
+
+
+<div class="card tool">
+<div class="icon">🎓</div>
+<h3>CGPA Calculator</h3>
+<p>Convert CGPA and calculate your academic performance.</p>
+<a href="#" class="btn">Open Tool</a>
+</div>
+
+
+<div class="card tool">
+<div class="icon">📝</div>
+<h3>Resume Maker</h3>
+<p>Create a professional resume for internships and jobs.</p>
+<a href="#" class="btn">Create Resume</a>
+</div>
+
+
+<div class="card tool">
+<div class="icon">💼</div>
+<h3>Job Resources</h3>
+<p>Explore useful job and career resources for freshers.</p>
+<a href="#career" class="btn">Explore</a>
+</div>
+
+
+<div class="card tool">
+<div class="icon">📚</div>
+<h3>Study Planner</h3>
+<p>Plan your daily study sessions and stay organized.</p>
+<a href="#" class="btn">Plan Study</a>
+</div>
+
+
+<div class="card tool">
+<div class="icon">⏰</div>
+<h3>Study Timer</h3>
+<p>Use focused study sessions to improve productivity.</p>
+<a href="#" class="btn">Start Timer</a>
+</div>
+
+
+<div class="card tool">
+<div class="icon">📅</div>
+<h3>Timetable Maker</h3>
+<p>Create a simple timetable for your classes and studies.</p>
+<a href="#" class="btn">Create</a>
+</div>
+
+
+</div>
+
+<div class="no-results" id="noResults">
+<h3>😕 No tool found</h3>
+<p>Try searching for calculator, resume, study, job or CGPA.</p>
+</div>
+
+</section>
+
+
+
+<section class="section" id="career">
+
+<div class="section-title">
+<h2>🚀 Career & Student Resources</h2>
+<p>Build your future step by step</p>
+</div>
+
+
+<div class="tools">
+
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>Jobs for Freshers</h3>
+<p>Resources and guidance to help freshers start their career.</p>
+<a href="#" class="btn">View Jobs</a>
+</div>
+
+
+<div class="card">
+<div class="icon">🎯</div>
+<h3>Interview Preparation</h3>
+<p>Prepare for technical and HR interviews with useful resources.</p>
+<a href="#" class="btn">Prepare</a>
+</div>
+
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>Resume Tips</h3>
+<p>Learn how to create a strong resume as a fresher.</p>
+<a href="#" class="btn">Learn More</a>
+</div>
+
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Career Ideas</h3>
+<p>Discover career paths, skills and opportunities for students.</p>
+<a href="#" class="btn">Explore</a>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="feature">
+
+<h2>🌟 Your Student Journey Starts Here</h2>
+
+<p>
+Study smarter, prepare better and build your career with
+Student Tools India.
+</p>
+
+<a href="#tools" class="btn">Explore All Tools →</a>
+
+</section>
+
+
+
+<section class="section" id="about">
+
+<div class="section-title">
+
+<h2>🇮🇳 About Student Tools India</h2>
+
+<p>
+A simple platform created to provide useful and free digital
+tools and resources for students.
+</p>
+
+</div>
+
+</section>
+
+
 </main>
-<footer><b>🎓 Student Tools India</b><p>Useful tools for students, all in one place.</p><p><a href="#home">Home</a> · <a href="#tools">Tools</a> · <a href="#resume">Resume</a> · <a href="#jobs">Jobs</a></p><small>© 2026 Student Tools India</small></footer>
-<script src="script.js"></script></body></html>
+
+
+
+<footer>
+
+<h2>🎓 Student Tools India</h2>
+
+<p>Free tools and resources for students.</p>
+
+<p>Made with ❤️ for Indian Students 🇮🇳</p>
+
+<div class="footer-links">
+<a href="#tools">Tools</a>
+<a href="#career">Career</a>
+<a href="#about">About</a>
+</div>
+
+<p style="margin-top:25px;">
+© 2026 Student Tools India. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+<script>
+
+function searchTools(){
+
+    let input =
+    document.getElementById("search").value.toLowerCase().trim();
+
+    let tools =
+    document.querySelectorAll(".tool");
+
+    let found = 0;
+
+    tools.forEach(function(tool){
+
+        let text =
+        tool.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            tool.style.display = "block";
+            found++;
+
+        }else{
+
+            tool.style.display = "none";
+
+        }
+
+    });
+
+    let noResults =
+    document.getElementById("noResults");
+
+    if(found === 0){
+
+        noResults.style.display = "block";
+
+    }else{
+
+        noResults.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
